@@ -8,8 +8,9 @@ class ArticlesController < ApplicationController
   end
 
   def search
-	require 'article_search_gem'
-    @articles = ArticleSearchGem.search(params[:query])
+	require 'review_search_gem'
+    @articles = ReviewSearchGem.search(params[:query])
+	puts @articles.inspect
   end
 	
   def new
