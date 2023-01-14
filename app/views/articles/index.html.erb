@@ -2,6 +2,11 @@
 
 <p>Our blog has <%= Article.public_count %> articles and counting!</p>
 
+<%= form_tag search_articles_path, method: :get do %>
+  <%= text_field_tag :query, params[:query], placeholder: "Search for articles" %>
+  <%= submit_tag "Search" %>
+<% end %>
+<br> 
 <ul>
   <% @articles.each do |article| %>
     <% unless article.archived? %>
@@ -36,5 +41,4 @@
       <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
     </a>
   </button>
-  </div>
 </div>

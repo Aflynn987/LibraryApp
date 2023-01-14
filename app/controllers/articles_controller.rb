@@ -7,6 +7,12 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id]).decorate
   end
 
+  def search
+	require 'review_search_gem'
+    @articles = ReviewSearchGem.search(params[:query])
+	puts @articles.inspect
+  end
+	
   def new
     @article = Article.new.decorate
   end

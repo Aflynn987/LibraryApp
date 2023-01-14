@@ -5,6 +5,8 @@ gem 'bootstrap', '~> 4.2.1'
 
 gem 'draper'
 
+gem 'review_search_gem'
+
 gem 'jquery-rails'
 
 gem 'devise'
