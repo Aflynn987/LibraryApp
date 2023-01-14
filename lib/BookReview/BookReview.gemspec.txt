@@ -1,0 +1,12 @@
+Gem::Specification.new do |s|
+	s.name = 'bookreview'
+	s.version = '0.0.0'
+	s.date = '2023-01-10'
+	s.summary = "Gem used to accept and manipulate aspects of deploying a book review"
+	s.description = "Simple book review assistance"
+	s.authors = ["AFlynn"]
+	s.email = "aflynn987@gmail.com"
+	s.homepage = 'http://rubygems.org/gems/bookreview'
+	s.files = ["lib/bookreview.rb"]
+	s.license = 'MIT'
+end
