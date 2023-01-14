@@ -1,8 +1,7 @@
-
 <%= form_with model: article do |form| %>
   <div>
-	<%= form.label :status %><br>
-	<%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    <%= form.label :status %><br>
+    <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
   </div>
   <div>
     <%= form.label :title %><br>
@@ -20,6 +19,23 @@
     <% end %>
   </div>
 
+  <div>
+    <%= form.label :book_title %><br>
+    <%= form.text_field :book_title %>
+  </div>
+  <div>
+    <%= form.label :book_cover_image %><br>
+    <%= form.file_field :book_cover_image %>
+  </div>
+  <div>
+    <%= form.label :book_review %><br>
+    <%= form.text_area :book_review %>
+  </div>
+  <div>
+    <%= form.label :book_rating %><br>
+    <%= form.radio_button :book_rating, :thumbs_up %> Thumbs Up
+    <%= form.radio_button :book_rating, :thumbs_down %> Thumbs Down
+  </div>
   <div>
     <%= form.submit %>
   </div>
